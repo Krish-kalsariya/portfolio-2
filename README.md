@@ -199,22 +199,7 @@ A mobile application for diamond and jewellery business management.
 - Shopify CLI
 - Docker
 
----
 
-## Education
-
-### Master of Computer Applications — MCA
-
-**MIT Art, Design & Technology University, Pune**  
-**2026 – 2028**  
-Specialization: **Cloud Computing**
-
-### Bachelor of Computer Applications — BCA
-
-**Veer Narmad South Gujarat University (VNSGU)**  
-Completed: **2026**
-
----
 
 ## 3D Developer Experience
 
