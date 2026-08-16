@@ -16,7 +16,6 @@ I enjoy building modern web and mobile applications using technologies such as *
 
 Alongside software development, I am developing strong foundations in **Cloud Computing, AWS, Linux, Networking, Docker, Git, and DevOps**.
 
-My goal is to become a strong **Cloud + Full Stack Developer** and build scalable, real-world applications.
 
 ---
 
