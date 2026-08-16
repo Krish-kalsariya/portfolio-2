@@ -6,7 +6,7 @@
 export type Lang = "es" | "en";
 
 export const LANGUAGES: Lang[] = ["es", "en"];
-export const DEFAULT_LANG: Lang = "es";
+export const DEFAULT_LANG: Lang = "en";
 
 type Leaf = Record<Lang, string>;
 type Node = Leaf | { [key: string]: Node };
@@ -36,23 +36,23 @@ export const DICT = {
   },
   header: {
     availability: {
-      es: "Open to opportunities",
-      en: "Open to opportunities",
+      es: "Disponible para oportunidades",
+      en: "Available for opportunities",
     },
   },
   hero: {
     greeting: { es: "Hola, soy", en: "Hi, I am" },
     roleLine: {
-      es: "Software Engineer & Tech Lead.",
-      en: "Software Engineer & Tech Lead.",
+      es: "Desarrollador Full Stack / Especialista en React",
+      en: "Full Stack Developer / React Specialist",
     },
     tagline: {
-      es: "Especializado en ERPs y aplicaciones full-stack para empresas.",
-      en: "Specialised in ERPs and full-stack apps for businesses.",
+      es: "Creando experiencias digitales excepcionales con tecnologías web modernas.",
+      en: "Crafting exceptional digital experiences with modern web technologies.",
     },
     cv: { es: "Descargar CV", en: "Download CV" },
     hire: { es: "Contactarme", en: "Contact me" },
-    scroll: { es: "Scroll para explorar", en: "Scroll to explore" },
+    scroll: { es: "Deslizar para explorar", en: "Scroll to explore" },
     keysHint: {
       es: "· hover sobre las teclas",
       en: "· hover over the keys",
@@ -61,8 +61,8 @@ export const DICT = {
   stack: {
     title: { es: "Tech Stack", en: "Tech Stack" },
     hint: {
-      es: "(hint: pasa el ratón por una tecla)",
-      en: "(hint: hover over a key)",
+      es: "(pasa el ratón por una tecla)",
+      en: "(hover over a key)",
     },
     hintMobile: {
       es: "Las herramientas con las que construyo.",
@@ -70,7 +70,7 @@ export const DICT = {
     },
   },
   experience: {
-    title: { es: "Experience", en: "Experience" },
+    title: { es: "Experiencia", en: "Experience" },
     subtitle: {
       es: "Mi trayectoria profesional.",
       en: "My professional journey.",
@@ -89,80 +89,94 @@ export const DICT = {
     kicker: { es: "contacto", en: "contact" },
     title: { es: "¿Hablamos?", en: "Let's talk?" },
     body: {
-      es: "Si lo que has visto te interesa, el teclado ya está listo para recibir el primer mensaje.",
-      en: "If what you've seen interests you, the keyboard is ready for the first message.",
+      es: "Si te interesa lo que has visto o tienes un proyecto en mente, envíame un mensaje directo aquí.",
+      en: "Have a project in mind, looking to collaborate, or just want to connect? Send me a message directly.",
     },
     copyEmail: { es: "Copiar email", en: "Copy email" },
     openMail: { es: "Abrir mail", en: "Open mailto" },
     github: { es: "GitHub", en: "GitHub" },
     linkedin: { es: "LinkedIn", en: "LinkedIn" },
     emailToast: { es: "Email copiado", en: "Email copied" },
+    formName: { es: "Tu Nombre", en: "Your Name" },
+    formEmail: { es: "Tu Correo", en: "Your Email" },
+    formSubject: { es: "Asunto", en: "Subject" },
+    formMessage: { es: "Tu Mensaje", en: "Your Message" },
+    formSend: { es: "Enviar Mensaje", en: "Send Message" },
+    formSending: { es: "Enviando...", en: "Sending..." },
+    formSuccess: {
+      es: "¡Mensaje enviado con éxito! Te responderé pronto.",
+      en: "Message sent successfully! I'll get back to you soon.",
+    },
+    formError: {
+      es: "Hubo un error al enviar el mensaje. Inténtalo de nuevo o escribe por correo.",
+      en: "Failed to send message. Please try again or reach out via email.",
+    },
     footer: {
-      es: "© 2026 Txema Albero. Todos los derechos reservados.",
-      en: "© 2026 Txema Albero. All rights reserved.",
+      es: "© 2026 Krish Kalsariya. Todos los derechos reservados.",
+      en: "© 2026 Krish Kalsariya. All rights reserved.",
     },
   },
   keyboard: {
     taglines: {
-      javascript: {
-        es: "Donde empezó todo. Sigue aquí, sigue mandando.",
-        en: "Where it all started. Still here, still in charge.",
-      },
-      typescript: {
-        es: "Mismo JS, con cinturón de seguridad.",
-        en: "Same JS, with a seatbelt.",
-      },
       html5: {
-        es: "Los huesos de cualquier página.",
-        en: "The bones of any page.",
+        es: "El lenguaje de marcado fundamental de la web.",
+        en: "The core markup language of the web.",
       },
       css: {
-        es: "El detalle que separa lo bueno de lo bonito.",
-        en: "What separates good from beautiful.",
+        es: "Dando vida a los diseños y estilos visuales.",
+        en: "Bringing layouts and visual styles to life.",
       },
       tailwindcss: {
-        es: "Utility-first. Diseño en el HTML.",
-        en: "Utility-first. Design inside the HTML.",
+        es: "Construcción rápida de diseños con CSS utility-first.",
+        en: "Rapidly building custom designs with utility-first CSS.",
       },
-      python: {
-        es: "Se lee como inglés, escala como cohete.",
-        en: "Reads like English, scales like a rocket.",
+      javascript: {
+        es: "Añadiendo comportamientos interactivos y dinámicos.",
+        en: "Adding interactive behaviors and dynamic capabilities.",
+      },
+      typescript: {
+        es: "Tipando JavaScript para un código más robusto y limpio.",
+        en: "Typing JavaScript for robust, safer, and cleaner code.",
       },
       react: {
-        es: "Componentes, componentes, componentes.",
-        en: "Components, components, components.",
-      },
-      nextdotjs: {
-        es: "React adulto: routing, SSR, edge.",
-        en: "React all grown up: routing, SSR, edge.",
-      },
-      vuedotjs: {
-        es: "El frontend más relajado.",
-        en: "The most relaxed frontend.",
+        es: "Construyendo interfaces responsivas con componentes reutilizables.",
+        en: "Building responsive user interfaces with reusable components.",
       },
       nodedotjs: {
-        es: "JavaScript en el servidor.",
-        en: "JavaScript on the server.",
+        es: "Escalando JavaScript para impulsar backends rápidos.",
+        en: "Scaling JavaScript to power fast, asynchronous backends.",
       },
-      php: {
-        es: "Mueve más web de la que crees.",
-        en: "Runs more of the web than you think.",
+      express: {
+        es: "Framework web minimalista para construir APIs RESTful.",
+        en: "Minimalist web framework for building RESTful APIs.",
       },
-      odoo: {
-        es: "ERP que no hace llorar.",
-        en: "ERP that doesn't make you cry.",
-      },
-      postgresql: {
-        es: "La base de datos aburrida que siempre funciona.",
-        en: "The boring database that always works.",
-      },
-      docker: {
-        es: "Igual en mi máquina, igual en producción.",
-        en: "Same on my machine, same in production.",
+      mongodb: {
+        es: "Base de datos NoSQL flexible basada en documentos.",
+        en: "Flexible, document-based NoSQL database for modern apps.",
       },
       git: {
-        es: "Historia y máquina del tiempo del código.",
-        en: "History and a time machine for your code.",
+        es: "Seguimiento de cambios y versionado de código.",
+        en: "Tracking changes and versioning code efficiently.",
+      },
+      github: {
+        es: "Alojamiento de repositorios y colaboración en desarrollo.",
+        en: "Hosting repositories and collaborating with developers.",
+      },
+      postman: {
+        es: "Diseño, prueba y depuración de APIs con facilidad.",
+        en: "Designing, testing, and debugging APIs with ease.",
+      },
+      figma: {
+        es: "Colaboración en diseños modernos limpios e intuitivos.",
+        en: "Collaborating on clean, intuitive modern designs.",
+      },
+      mysql: {
+        es: "Sistema relacional para datos estructurados.",
+        en: "Relational database management system for structured data.",
+      },
+      postgresql: {
+        es: "Base de datos relacional avanzada de código abierto.",
+        en: "Advanced open-source relational database.",
       },
     },
   },

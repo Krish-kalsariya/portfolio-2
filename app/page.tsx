@@ -8,6 +8,7 @@ import SectionNav from "@/components/SectionNav";
 import CopyEmail from "@/components/CopyEmail";
 import SeasonPicker from "@/components/SeasonPicker";
 import LanguagePicker from "@/components/LanguagePicker";
+import ContactForm from "@/components/ContactForm";
 import ProjectModal, {
   type ProjectDetail,
 } from "@/components/ProjectModal";
@@ -16,7 +17,7 @@ import { useIsMobile } from "@/lib/useIsMobile";
 import { SKILLS_FLAT } from "@/lib/skills";
 import type { Lang } from "@/lib/i18n";
 
-const EMAIL = "josemariaalberobelamendia@gmail.com";
+const EMAIL = "kalsariyakrish22@gmail.com";
 
 // Localised content lives in `{ es, en }` objects inside these arrays so the
 // page can be a straightforward array.map() at render time. Tech names stay
@@ -32,145 +33,118 @@ const projects: Project[] = [
   {
     num: "01",
     name: {
-      es: "Contestador IA de Reseñas Google",
-      en: "AI Responder for Google Reviews",
+      es: "Bookora - Librería en Línea",
+      en: "Bookora - Online Book Store",
     },
     stack: [
-      "Next.js",
-      "FastAPI",
-      "Python",
-      "PostgreSQL",
-      "Supabase",
-      "Claude API",
-      "Stripe",
-      "Celery",
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
     ],
     desc: {
-      es: "SaaS que genera respuestas personalizadas a reseñas de Google Business Profile con IA, manteniendo el tono de la marca.",
-      en: "SaaS that generates personalised replies to Google Business Profile reviews with AI while keeping the brand tone.",
+      es: "Una librería en línea completa construida con el stack MERN, con paneles separados para administrador y usuario.",
+      en: "A comprehensive MERN stack online bookstore with separate admin and user panels, featuring secure user flows.",
     },
     details: {
-      es: "Plataforma orientada a negocios locales en España para gestionar sus reseñas de Google Business Profile. El sistema hace polling cada 15 minutos, llama a Claude para generar respuestas alineadas con el tono de marca y las publica automáticamente (o las manda a revisión). Incluye Stripe con suscripciones y Customer Portal, autenticación con Google OAuth + PKCE, alertas por email/SMS para reseñas negativas y un dashboard con métricas.",
-      en: "A platform for local businesses in Spain to manage their Google Business Profile reviews. The system polls every 15 minutes, uses Claude to draft replies in the brand's tone and publishes them automatically (or sends them to review). Stripe handles subscriptions and Customer Portal, auth is Google OAuth with PKCE, and negative reviews fire email/SMS alerts. Dashboard with metrics included.",
+      es: "Plataforma completa de comercio electrónico de libros con autenticación de roles para administradores y usuarios mediante JWT, gestión de carrito de compras (CRUD) y seguimiento del estado del pedido.",
+      en: "A full-fledged e-commerce platform for books featuring role-based dashboards for admins and users, secure JWT authentication, dynamic shopping cart CRUD operations, and comprehensive order tracking.",
     },
-    url: "https://revio.txemaalbero.com/",
+    url: "https://bookora-book-store-fronted.vercel.app/",
     media: [
-      "/projects/revio/landing.png",
-      "/projects/revio/dashboard.png",
-      "/projects/revio/alertas.png",
-      "/projects/revio/analiticas.png",
-      "/projects/revio/negocios.png",
-      "/projects/revio/analiticas-ia.png",
+      "/projects/bookora/landing.png",
     ],
-    highlights: ["nextdotjs", "tailwindcss", "python", "postgresql"],
+    highlights: ["react", "nodedotjs", "express", "mongodb", "tailwindcss"],
     align: "left",
     section: "project1",
   },
   {
     num: "02",
     name: {
-      es: "Control de Temperaturas APPCC",
-      en: "HACCP Temperature Control",
+      es: "Brainera - Plataforma de Aprendizaje",
+      en: "Brainera - Learning Management System",
     },
     stack: [
-      "Next.js 16",
-      "FastAPI",
-      "Python",
-      "PostgreSQL",
-      "Supabase",
-      "Claude API",
-      "Stripe",
-      "Celery",
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
     ],
     desc: {
-      es: "App para restaurantes que digitaliza el registro de temperaturas APPCC y genera planes e informes automáticos para inspecciones sanitarias.",
-      en: "App for restaurants that digitises HACCP temperature logs and auto-generates plans and reports for food safety inspections.",
+      es: "Plataforma LMS repleta de funciones que permite la compra de cursos, aprendizaje en video y cuestionarios interactivos.",
+      en: "A feature-rich LMS platform enabling course purchasing, video-based learning, interactive quizzes, and certificates.",
     },
     details: {
-      es: "Digitaliza el control APPCC completo de un restaurante: registros de temperatura, trazabilidad, alérgenos y generación asistida por IA de los planes HACCP. Integración con Open Food Facts para importar alérgenos, MFA en la autenticación, multi-idioma con next-intl y pagos por suscripción con Stripe. Backend 100% async con FastAPI + SQLAlchemy y tareas en Celery.",
-      en: "Full HACCP digitisation for a restaurant: temperature logs, traceability, allergens, and AI-assisted generation of HACCP plans. Integrates with Open Food Facts for allergens, MFA-protected auth, i18n with next-intl, subscription billing with Stripe. Fully async backend with FastAPI + SQLAlchemy and Celery workers.",
+      es: "Una solución completa de tecnología educativa (EdTech) construida con MERN. Incluye pasarela de pago para cursos, reproducción y seguimiento de módulos de video interactivos, un generador automatizado de certificados de finalización y cuestionarios calificados en tiempo real.",
+      en: "An end-to-end EdTech solution built on the MERN stack. Features structured course purchasing, interactive video playback modules, real-time graded quiz systems, and automated certificate generation upon course completion.",
     },
-    url: "https://aptia.txemaalbero.com/",
+    url: "https://lms-client-plum-ten.vercel.app/",
     media: [
-      "/projects/aptia/landing.png",
-      "/projects/aptia/panel.png",
-      "/projects/aptia/registros.png",
-      "/projects/aptia/carta-alergenos.png",
-      "/projects/aptia/inspeccion.png",
-      "/projects/aptia/cuestionario.png",
+      "/projects/brainera/landing.png",
     ],
-    highlights: ["nextdotjs", "tailwindcss", "python", "postgresql", "typescript"],
-    badge: { es: "En desarrollo", en: "In progress" },
+    highlights: ["react", "nodedotjs", "express", "mongodb", "tailwindcss"],
     align: "right",
     section: "project2",
   },
   {
     num: "03",
     name: {
-      es: "Gestor de Finanzas Personales",
-      en: "Personal Finance Tracker",
+      es: "Tienda Shopify de Moda de Lujo",
+      en: "Luxury Fashion Shopify Store",
     },
     stack: [
-      "Django",
-      "Python",
-      "SQLite",
+      "Shopify",
+      "Liquid",
       "HTML5",
       "CSS3",
       "JavaScript",
-      "Chart.js",
-      "pandas",
     ],
     desc: {
-      es: "Dashboard para seguimiento de ingresos, gastos y objetivos de ahorro con visualizaciones gráficas, importación desde Excel e informes mensuales.",
-      en: "Dashboard to track income, expenses and savings goals with visual charts, Excel import and monthly reports.",
+      es: "Tienda moderna de comercio electrónico de moda de lujo de alta gama con navegación y UX pulida. (Contraseña de la tienda: 123)",
+      en: "Designed and developed a modern luxury fashion e-commerce website on Shopify with high-end premium UI/UX. (Store Password: 123)",
     },
     details: {
-      es: "Aplicación Django clásica (MVT) para finanzas personales: categorización de gastos, objetivos de ahorro, importación masiva desde Excel (xlsx/xls) y gráficos con Chart.js. Temas claro/oscuro hechos con CSS puro y sin dependencias frontend. Un proyecto que prioriza simplicidad y robustez: sin frameworks en el cliente, autenticación nativa de Django, base de datos SQLite.",
-      en: "Classic Django (MVT) app for personal finance: expense categorisation, savings goals, bulk import from Excel (xlsx/xls) and Chart.js-powered graphs. Light/dark themes in pure CSS with zero frontend dependencies. A project that favours simplicity and robustness: no client framework, Django's built-in auth, SQLite storage.",
+      es: "Una tienda de ropa de lujo construida con Liquid de Shopify y estilos personalizados. Ofrece colecciones de productos optimizadas, filtros avanzados de búsqueda, diseño altamente responsivo y una experiencia de compra diseñada para maximizar las conversiones.\n\n🔑 Contraseña de la tienda: 123",
+      en: "Premium clothing store featuring deep customization of Shopify Liquid themes. Includes optimized collections, advanced product filters, highly responsive layouts, and conversion-focused checkout streams.\n\n🔑 Store Password: 123",
     },
-    github: "https://github.com/Txemalon/Gestor-de-gastos-personales",
+    url: "https://fashion-cqzztlj3.myshopify.com/",
     media: [
-      "/projects/gestor-gastos/dashboard.png",
-      "/projects/gestor-gastos/wallets.png",
-      "/projects/gestor-gastos/transacciones.png",
-      "/projects/gestor-gastos/categorias.png",
-      "/projects/gestor-gastos/reportes.png",
-      "/projects/gestor-gastos/inversiones.png",
+      "/projects/fashion/landing.png",
     ],
-    highlights: ["python", "javascript", "html5", "css"],
+    highlights: ["html5", "css", "javascript"],
     align: "left",
     section: "project3",
   },
   {
     num: "04",
     name: {
-      es: "Tienda online de dianas",
-      en: "Dartboards e-commerce",
+      es: "Aurelia Gems - Joyería Shopify",
+      en: "Aurelia Gems - Jewelry Shopify Store",
     },
     stack: [
-      "Next.js 15",
-      "React",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "NextAuth",
-      "Stripe",
-      "Framer Motion",
+      "Shopify",
+      "Liquid",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
     ],
     desc: {
-      es: "E-commerce moderno para venta de dianas con pagos integrados, autenticación social, panel de administración y animaciones fluidas.",
-      en: "Modern e-commerce for dartboards with integrated payments, social auth, an admin panel and smooth animations.",
+      es: "Sitio web de comercio electrónico premium para una marca de joyería fina, con un diseño elegante y lujoso. (Contraseña de la tienda: 123)",
+      en: "Built a premium jewelry e-commerce website on Shopify featuring an elegant and luxurious brand design. (Store Password: 123)",
     },
     details: {
-      es: "Tienda online completa con catálogo, carrito y checkout con Stripe. NextAuth con Google OAuth y credenciales, rate limiting con Upstash Redis, validación con Zod y un panel de administración separado (AdminJS sobre Express, puerto 3001). Transiciones y microinteracciones con Framer Motion para darle un acabado más premium que una tienda al uso.",
-      en: "A full e-commerce with catalogue, cart and Stripe checkout. NextAuth with Google OAuth and credentials, Upstash Redis for rate limiting, Zod validation, and a separate admin panel (AdminJS on Express, port 3001). Framer Motion powers transitions and micro-interactions for a more premium feel than a typical shop.",
+      es: "Tienda de comercio electrónico de lujo diseñada a medida para joyas finas. Implementa páginas de productos optimizadas para fotografía de alta resolución, gestión avanzada de colecciones y layouts responsivos con transiciones suaves.\n\n🔑 Contraseña de la tienda: 123",
+      en: "An elegant e-commerce experience tailored for fine jewelry. Focuses on premium visual presentation, customizable Liquid page layouts, responsive collection organization, and high-performance load times.\n\n🔑 Store Password: 123",
     },
+    url: "https://aurelia-gems-bubwuskv.myshopify.com/",
     media: [
-      "/projects/dianas/packs.png",
-      "/projects/dianas/catalogo.png",
+      "/projects/aurelia/landing.png",
     ],
-    highlights: ["nextdotjs", "react", "typescript", "tailwindcss", "postgresql"],
-    badge: { es: "En construcción", en: "Under construction" },
+    highlights: ["html5", "css", "javascript"],
     align: "right",
     section: "project4",
   },
@@ -186,34 +160,55 @@ const experiences: Array<{
   stack: string[];
 }> = [
   {
-    role: { es: "Tech Lead", en: "Tech Lead" },
-    company: "Activalink",
-    period: { es: "2023 — Presente", en: "2023 — Present" },
-    location: { es: "Alcoy, España", en: "Alcoy, Spain" },
+    role: { es: "Desarrollador Full Stack", en: "Full Stack Developer" },
+    company: "Platinum Tech",
+    period: { es: "16 de marzo de 2026 — 15 de julio de 2026", en: "March 16, 2026 — July 15, 2026" },
+    location: { es: "Surat, Gujarat, India", en: "Surat, Gujarat, India" },
     summary: {
-      es: "Activalink implementa y adapta ERPs para pymes y grandes empresas. Desarrollo módulos y personalizaciones custom sobre Odoo, integraciones a medida y proyectos de implantación llave en mano. Lidero un equipo de 3 desarrolladores: nuestro trabajo se mide en tiempo ahorrado y errores evitados.",
-      en: "Activalink implements and customises ERPs for SMBs and large companies. I build custom modules and personalisations on top of Odoo, bespoke integrations, and end-to-end implementation projects. I lead a team of 3 developers: our work is measured in time saved and errors avoided.",
+      es: "Trabajé como desarrollador Full Stack contribuyendo al diseño, desarrollo, pruebas y mantenimiento de aplicaciones web robustas.",
+      en: "Contributed to the design, development, testing, and maintenance of web applications using modern full-stack web technologies.",
     },
     bullets: [
       {
-        es: "OCR de facturas en Odoo — de 4 h/día a 30 min (−87 %).",
-        en: "Invoice OCR in Odoo — from 4 h/day down to 30 min (−87 %).",
+        es: "Desarrollo de módulos e interfaces de usuario altamente responsivas con React y Next.js.",
+        en: "Developed highly responsive user interfaces and modular layouts using React and Next.js."
       },
       {
-        es: "Logística con mapa interactivo — −60 % errores de seguimiento.",
-        en: "Interactive logistics map — −60 % tracking errors.",
+        es: "Colaboración en la escritura de código limpio y estructurado de alta calidad siguiendo mejores prácticas.",
+        en: "Collaborated on writing clean, structured, high-quality code adhering to industry standards."
       },
       {
-        es: "Conciliación automática — cierre contable de 3 días a medio día.",
-        en: "Automated reconciliation — monthly close from 3 days to half a day.",
-      },
-      {
-        es: "Dashboards financieros — detección temprana de facturas sin emitir.",
-        en: "Financial dashboards — early detection of uninvoiced orders.",
-      },
+        es: "Diseño de APIs RESTful utilizando Node, Express y bases de datos SQL / NoSQL.",
+        en: "Designed and developed robust RESTful APIs using Node, Express, and SQL/NoSQL databases."
+      }
     ],
-    stack: ["Odoo", "Python", "PostgreSQL", "Next.js", "TypeScript", "Docker"],
+    stack: ["React", "Next.js", "Node.js", "Express.js", "TypeScript", "SQL", "MongoDB"],
   },
+  {
+    role: { es: "Desarrollador Full Stack Pasante", en: "Full Stack Developer Intern" },
+    company: "Platinum Tech",
+    period: { es: "15 de diciembre de 2025 — 15 de marzo de 2026", en: "December 15, 2025 — March 15, 2026" },
+    location: { es: "Surat, Gujarat, India", en: "Surat, Gujarat, India" },
+    summary: {
+      es: "Completé una pasantía intensiva de 3 meses construyendo aplicaciones web completas utilizando el stack MERN.",
+      en: "Completed an intensive internship focusing on MERN stack web applications and API architectures."
+    },
+    bullets: [
+      {
+        es: "Desarrollo de APIs RESTful integradas con MongoDB y Express.",
+        en: "Built and deployed robust RESTful APIs integrated with MongoDB and Express.js."
+      },
+      {
+        es: "Implementación de mecanismos seguros de autenticación mediante JSON Web Tokens (JWT).",
+        en: "Implemented secure authentication and authorization flows utilizing JSON Web Tokens (JWT)."
+      },
+      {
+        es: "Optimización del rendimiento de la base de datos y diseño de esquemas eficientes.",
+        en: "Optimized database query performance and designed efficient schemas for real-world projects."
+      }
+    ],
+    stack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "REST APIs"],
+  }
 ];
 
 function pick<T>(loc: { es: T; en: T }, lang: Lang): T {
@@ -262,7 +257,7 @@ export default function Home() {
               data-cursor="hover"
               className="text-sm font-semibold tracking-tight text-ice-100 whitespace-nowrap"
             >
-              Txema Albero
+              Krish Kalsariya
             </span>
             {/* Wrapper (not the pill itself) carries the hide: .status-pill
                 hard-sets display:inline-flex, which beats Tailwind's .hidden
@@ -275,7 +270,7 @@ export default function Home() {
             <SeasonPicker />
             <span className="hidden md:inline-flex">
             <a
-              href="https://github.com/Txemalon/3d-portfolio"
+              href="https://github.com/Krish-kalsariya"
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="hover"
@@ -314,9 +309,9 @@ export default function Home() {
                 {t("hero.greeting")}
               </p>
               <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] font-bold tracking-[-0.03em] text-ice-50 leading-[0.92] whitespace-nowrap">
-                <HeroWord text="Txema" delay={120} />
+                <HeroWord text="Krish" delay={120} />
                 <br />
-                <HeroWord text="Albero" delay={260} className="text-ice-400" />
+                <HeroWord text="Kalsariya" delay={260} className="text-ice-400" />
               </h1>
               <p
                 className="mt-8 text-base sm:text-lg md:text-xl text-ice-200 max-w-xl leading-relaxed fade-in-up"
@@ -333,7 +328,7 @@ export default function Home() {
                 style={{ ["--d" as string]: "700ms" }}
               >
                 <a
-                  href={lang === "en" ? "/cv_en.pdf" : "/cv.pdf"}
+                  href="https://krish-kalsariya.vercel.app/assets/resume/Krish_resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="hover"
@@ -366,7 +361,7 @@ export default function Home() {
                     so desktop keeps everything on a single line. */}
                 <div className="basis-full h-0 md:hidden" aria-hidden />
                 <a
-                  href="https://es.linkedin.com/in/jose-mar%C3%ADa-albero-belamendia-b9319a246"
+                  href="https://www.linkedin.com/in/krish-kalsariya"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="hover"
@@ -379,7 +374,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://github.com/Txemalon"
+                  href="https://github.com/Krish-kalsariya"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="hover"
@@ -651,27 +646,34 @@ export default function Home() {
             </section>
           ))}
 
-          {/* Contact — copy pinned to the left so the (large, hero-posed)
-              keyboard on the right has room to bob its random keys. */}
+          {/* Contact — copy and form pinned to the left with frosted look */}
           <section
             data-kb-section="contact"
             className="relative py-24 md:min-h-screen flex flex-col justify-center p-6 sm:p-10 md:p-14 overflow-hidden"
           >
-            <div className="max-w-xl relative">
+            <div className="max-w-2xl relative z-10">
               <Reveal>
                 <p className="font-mono text-sm text-ice-400 mb-3">
                   {t("contact.kicker")}
                 </p>
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="text-4xl sm:text-6xl font-semibold tracking-tight text-ice-50 mb-6">
+                <h2 className="text-4xl sm:text-6xl font-semibold tracking-tight text-ice-50 mb-4">
                   {t("contact.title")}
                 </h2>
               </Reveal>
               <Reveal delay={160}>
-                <p className="text-ice-200 mb-10">{t("contact.body")}</p>
+                <p className="text-ice-200 mb-8">{t("contact.body")}</p>
               </Reveal>
-              <Reveal delay={240}>
+
+              {/* Direct message contact form */}
+              <Reveal delay={220}>
+                <div className="p-6 sm:p-8 rounded-2xl bg-ink-2/60 border border-ice-300/20 backdrop-blur-xl shadow-2xl mb-8 pointer-events-auto">
+                  <ContactForm />
+                </div>
+              </Reveal>
+
+              <Reveal delay={300}>
                 <div className="flex flex-wrap gap-3 pointer-events-auto">
                   <CopyEmail
                     email={EMAIL}
@@ -688,30 +690,41 @@ export default function Home() {
                     data-cursor="hover"
                     className="frost-btn"
                   >
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
                     {t("contact.openMail")}
                   </a>
                   <a
-                    href="https://github.com/Txemalon"
+                    href="https://github.com/Krish-kalsariya"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-cursor="hover"
                     className="frost-btn"
                   >
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden>
+                      <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
                     {t("contact.github")}
                   </a>
                   <a
-                    href="https://es.linkedin.com/in/jose-mar%C3%ADa-albero-belamendia-b9319a246"
+                    href="https://www.linkedin.com/in/krish-kalsariya"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-cursor="hover"
                     className="frost-btn"
                   >
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden>
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
                     {t("contact.linkedin")}
                   </a>
                 </div>
               </Reveal>
             </div>
-            <Reveal delay={320}>
+            <Reveal delay={360}>
               <p className="mt-14 text-[11px] uppercase tracking-[0.25em] text-ice-400">
                 {t("contact.footer")}
               </p>

@@ -1,19 +1,19 @@
 import {
   siCss,
-  siDocker,
+  siExpress,
+  siFigma,
   siGit,
+  siGithub,
   siHtml5,
   siJavascript,
-  siNextdotjs,
+  siMongodb,
+  siMysql,
   siNodedotjs,
-  siOdoo,
-  siPhp,
+  siPostman,
   siPostgresql,
-  siPython,
   siReact,
   siTailwindcss,
   siTypescript,
-  siVuedotjs,
 } from "simple-icons";
 
 export type SkillIcon = {
@@ -28,9 +28,9 @@ export type SkillIcon = {
 // hover-driven keyboard interaction. Taglines live in the i18n dictionary
 // under `keyboard.taglines.<slug>`.
 export const SKILLS_GRID: readonly (readonly SkillIcon[])[] = [
-  [siJavascript, siTypescript, siHtml5, siCss, siTailwindcss],
-  [siPython, siReact, siNextdotjs, siVuedotjs, siNodedotjs],
-  [siPhp, siOdoo, siPostgresql, siDocker, siGit],
+  [siHtml5, siCss, siTailwindcss, siJavascript, siTypescript],
+  [siReact, siNodedotjs, siExpress, siMongodb, siGit],
+  [siGithub, siPostman, siFigma, siMysql, siPostgresql],
 ] as const;
 
 export const SKILLS_FLAT: readonly SkillIcon[] = SKILLS_GRID.flat();
